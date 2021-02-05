@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio to Image Converter</title>
+  <script src="bundle.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png"/>
+</head>
+<body>
+  <div class="main-content">
+    <h1>Audio to image</h1>
+    <h3>Upload WAV file to encode:</h3>
+    <input id="audio-input" type="file" name="audio" accept=".wav" />
+    <h3>Upload PNG or JPEG file to encode audio in (optional):</h3>
+    <input id="image-input" type="file" name="image" accept=".png,.jpg" />
+    <button id="btn-convert-to-image">Convert</button>
+    <p id="download-message" style="display: none;">Click on image to download.</p>
+    <a id="download-link">
+      <canvas id="canvas" width="0" height="0"></canvas>
+    </a>
+    <h1>Image to audio</h1>
+    <h3>Upload PNG file to decode:</h3>
+    <input id="image-input-reverse" type="file" name="image-reverse" accept=".png" />
+    <button id="btn-convert-to-audio">Convert</button>
+    <div class="audio-buttons" id="div-audio-buttons" style="display: none;">
+      <button id="btn-toggle-audio">Play</button>
+      <button id="btn-stop-audio">Stop</button>
+    </div>
+    <a id="download-link-audio" style="display: none;"></a>
+    <canvas id="canvas-reverse" width="0" height="0"></canvas>
+  </div>
+</body>
+</html>
